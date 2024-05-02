@@ -1,0 +1,18 @@
+<script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+<div id="pricing_table"></div>
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const client_reference_id = urlParams.get('client_reference_id');
+    const browser_table_id = 'prctbl_1OwOwDGYAgiVIRTRLqvndW4s';
+    const watch_table_id = 'prctbl_1OwNx8GYAgiVIRTReaVpp1sZ';
+
+    const stripe_pricing_table = document.createElement('stripe-pricing-table');
+    stripe_pricing_table.setAttribute('pricing-table-id', client_reference_id ? watch_table_id : browser_table_id);
+    stripe_pricing_table.setAttribute('publishable-key', 'pk_test_51NKhvLGYAgiVIRTR2L1m9ypZwwDt8e0rhQuGdcsOwJ2E3wNRX7vw0c9JUVA2FhTvp5KcQn29c8NRoT0Vn987HFOH00lzzXq1BZ');
+    stripe_pricing_table.setAttribute('client-reference-id', client_reference_id);
+
+    const pricing_table = document.getElementById("pricing_table");
+    pricing_table.replaceWith(stripe_pricing_table);
+
+    console.log('done: ' + client_reference_id);
+</script>

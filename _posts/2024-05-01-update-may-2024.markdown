@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Update May 2024!"
+date:   2024-05-01 11:07:22 +0200
+categories: update
+description: The May 2024 release features a complete rewrite of the SubMusic apps enabling an ultra low memory footprint.
+---
+
+The May 2024 update of the SubMusic and SubMusic for Plex apps is an almost full rewrite of the original source code. In the last few weeks, many Out of Memory errors were reported, especially on older watches. This coincided with the rollout of Garmin software updates. With this May 2024 update, this issue is addressed by a complete redesign of the internal storage. A very low memory footprint allows you to synchronize larger playlists without any errors, even after the latest Garmin updates. 
+
+For new users, the subscription status could only be updated manually through the phones BLE internet connection. Unfortunately, this connection is very unreliable and in many cases users received a `BLE_HOST_TIMEOUT` error, even though their phone was connected. The bug was reported with Garmin, but until now, it has not been resolved. Therefore, the May 2024 update includes an option to manually update the subscription status over Wifi as well. Make sure your watch has access to a wifi network and you're ready to go!
+
